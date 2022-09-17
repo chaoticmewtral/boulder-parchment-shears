@@ -1,3 +1,6 @@
+function getComputerChoice()
+function playRound(computerSelection, playerSelection)
+
 /*
 computer randomly chooses from ['rock', 'paper', 'scissors']
 user selects from ['rock', 'paper', 'scissors']
