@@ -5,7 +5,7 @@ function getComputerChoice() {
 }
 function playRound(computerSelection, playerSelection)
 
-// /*
+// https://www.theodinproject.com/lessons/foundations-rock-paper-scissors#assignment
 // computer randomly chooses from ['rock', 'paper', 'scissors']
 // user selects from ['rock', 'paper', 'scissors']
 // if computer selects rock:
