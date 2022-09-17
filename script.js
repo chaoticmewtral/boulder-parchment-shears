@@ -1,4 +1,6 @@
-function getComputerChoice()
+function getComputerChoice() {
+    let rps = ['rock', 'paper', 'scissors'];
+}
 function playRound(computerSelection, playerSelection)
 
 /*
