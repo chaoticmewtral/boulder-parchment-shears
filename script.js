@@ -31,7 +31,6 @@ let choice = ['boulder', 'parchment', 'shears'];
 function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
-// console.log(getComputerChoice());
 
 let playerSelection;
 let computerSelection;
@@ -103,12 +102,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
 
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-//         playRound();
-//     }
-// }
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+        console.log(`Round ${i + 1}: ${playRound(playerSelection, computerSelection)}`);
+    }
+}
 
-// console.log(game());
+console.log(game());
