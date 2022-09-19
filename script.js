@@ -33,13 +33,13 @@ function getComputerChoice() {
 }
 // console.log(getComputerChoice());
 
-const playerSelection = prompt('rock, paper, scissors');
-const computerSelection = getComputerChoice();
+let playerSelection = prompt('rock, paper, scissors');
+let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     // let player = (playerSelection.toLowerCase());
 
-    switch(playerSelection) {
+    switch(playerSelection.toLowerCase()) {
         case 'rock':
             switch(computerSelection) {
                 case 'rock':
