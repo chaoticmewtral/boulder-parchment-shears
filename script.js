@@ -35,6 +35,9 @@ function getComputerChoice() {
 
 let playerSelection = prompt('boulder, parchment, shears');
 let computerSelection = getComputerChoice();
+const win = (`You win! ${playerSelection} beats ${computerSelection}`);
+const lose = (`You lose! ${computerSelection} beats ${playerSelection}`);
+const draw = ("It's a draw");
 
 function playRound(playerSelection, computerSelection) {
     
@@ -45,44 +48,44 @@ function playRound(playerSelection, computerSelection) {
             case 'boulder':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "It's a draw!";
+                        return draw;
                         break;
                     
                     case 'parchment':
-                        return "You lose! Parchment beats Boulder!";
+                        return lose;
                         break;
 
                     case 'shears':
-                        return "You win! Boulder beats Shears!"
+                        return win;
                 }
                 break;
             case 'parchment':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "You win! Parchment beats Boulder!"
+                        return win;
                         break;
                     
                     case 'parchment':
-                        return "It's a draw!";
+                        return draw;
                         break;
 
                     case 'shears':
-                        return "You lose! Shears beat Parchment!"
+                        return lose;
                 }
                 break;
             
             case 'shears':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "You lose! Boulder beats Shears!"
+                        return lose;
                         break;
                     
                     case 'parchment':
-                        return "You win! Shears beat Parchment!"
+                        return win;
                         break;
 
                     case 'shears':
-                        return "It's a draw!";
+                        return draw;
                 }
                 break;
                 
@@ -98,7 +101,10 @@ function playRound(playerSelection, computerSelection) {
 
 console.log(playRound(playerSelection, computerSelection));
 
-function game() {
-    for (let i = 1; i <= 5; i++) {
-    }
-}
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+        
+//     }
+// }
+
+// console.log(game());
