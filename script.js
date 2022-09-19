@@ -1,39 +1,39 @@
-// https://www.theodinproject.com/lessons/foundations-rock-paper-scissors#assignment
-// computer randomly chooses from ['rock', 'paper', 'scissors']
-// user selects from ['rock', 'paper', 'scissors']
-// if computer selects rock:
-//     if user selects rock
+// https://www.theodinproject.com/lessons/foundations-boulder-parchment-shears#assignment
+// computer randomly chooses from ['boulder', 'parchment', 'shears']
+// user selects from ['boulder', 'parchment', 'shears']
+// if computer selects boulder:
+//     if user selects boulder
 //         tie
 //         play again
-//     if user selects paper
+//     if user selects parchment
 //         user wins
-//     if user selects scissors
+//     if user selects shears
 //         user loses
-// if computer selects paper:
-//     if user selects rock
+// if computer selects parchment:
+//     if user selects boulder
 //         user loses
-//     if user selects paper
+//     if user selects parchment
 //         tie
 //         play again
-//     if user selects scissors
+//     if user selects shears
 //         user wins
-// if computer selects scissors:
-//     if user selects rock
+// if computer selects shears:
+//     if user selects boulder
 //         user wins
-//     if user selects paper
+//     if user selects parchment
 //         user loses
-//     if user selects scissors
+//     if user selects shears
 //         tie
 //         play again
 
-let choice = ['rock', 'paper', 'scissors'];
+let choice = ['boulder', 'parchment', 'shears'];
 
 function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
 // console.log(getComputerChoice());
 
-let playerSelection = prompt('rock, paper, scissors');
+let playerSelection = prompt('boulder, parchment, shears');
 let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
@@ -42,46 +42,46 @@ function playRound(playerSelection, computerSelection) {
         return "Aww, don't you want to play?";
     } else {
         switch(playerSelection.toLowerCase()) {
-            case 'rock':
+            case 'boulder':
                 switch(computerSelection) {
-                    case 'rock':
+                    case 'boulder':
                         return "It's a draw!";
                         break;
                     
-                    case 'paper':
-                        return "You lose! Paper beats Rock!";
+                    case 'parchment':
+                        return "You lose! parchment beats boulder!";
                         break;
 
-                    case 'scissors':
-                        return "You win! Rock beats Scissors!"
+                    case 'shears':
+                        return "You win! boulder beats shears!"
                 }
                 break;
-            case 'paper':
+            case 'parchment':
                 switch(computerSelection) {
-                    case 'rock':
-                        return "You win! Paper beats Rock!"
+                    case 'boulder':
+                        return "You win! parchment beats boulder!"
                         break;
                     
-                    case 'paper':
+                    case 'parchment':
                         return "It's a draw!";
                         break;
 
-                    case 'scissors':
-                        return "You lose! Scissors beat Paper!"
+                    case 'shears':
+                        return "You lose! shears beat parchment!"
                 }
                 break;
             
-            case 'scissors':
+            case 'shears':
                 switch(computerSelection) {
-                    case 'rock':
-                        return "You lose! Rock beats Scissors!"
+                    case 'boulder':
+                        return "You lose! boulder beats shears!"
                         break;
                     
-                    case 'paper':
-                        return "You win! Scissors beat Paper!"
+                    case 'parchment':
+                        return "You win! shears beat parchment!"
                         break;
 
-                    case 'scissors':
+                    case 'shears':
                         return "It's a draw!";
                 }
                 break;
@@ -99,5 +99,5 @@ function playRound(playerSelection, computerSelection) {
 console.log(playRound(playerSelection, computerSelection));
 
 function game() {
-    
+
 }

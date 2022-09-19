@@ -1,2 +1,2 @@
-# rock-paper-scissors
-Browser game of Rock, Paper, Scissors
+# boulder-parchment-shears
+Browser game of boulder, parchment, shears
