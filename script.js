@@ -27,9 +27,10 @@
 //         play again
 
 function getComputerChoice() {
-    let rps = ['rock', 'paper', 'scissors'];
-
-    return rps[(Math.floor(Math.random() * 2))];
+    
 }
-function playRound(computerSelection, playerSelection)
+
+function playRound(playerSelection, computerSelection) {
+
+}
 
