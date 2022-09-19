@@ -142,14 +142,29 @@ function msg() {
 
 function game() {
 
-    const score = [];
+    let wins = 0;
+    let losses = 0;
 
     for (let i = 0; i < 5; i++) {
         playRound();
-        score[i] = result[0];
+        
+        if (result[0] === "win") {
+        wins++;
+        }
+        if (result[0] === "lose") {
+            losses++;
+        }
         console.log(`Round ${i + 1}: ${msg()}`);
     }
-return score;
+    if (wins >= 3) {
+        return `You won ${wins} rounds! Victory is yours!`
+    } else if (losses >= 3) {
+        return `Oof, you lost ${losses} times. Better luck next time.`
+    } else if  (wins > losses) {
+        return `*Technically* you won more than you lost, but I'd hardly call it a sweeping victory.`
+    } else {
+        return "Better luck next time."
+    }
 }
 
 console.log(game());
