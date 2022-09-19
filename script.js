@@ -41,47 +41,48 @@ function playRound(playerSelection, computerSelection) {
         case 'rock':
             switch(computerSelection) {
                 case 'rock':
-                    // code
+                    return "It's a draw!";
                     break;
                 
                 case 'paper':
-                    // code
+                    return "You lose! Paper beats Rock!";
                     break;
 
                 case 'scissors':
-                    // code
+                    return "You win! Rock beats Scissors!"
             }
             break;
         case 'paper':
             switch(computerSelection) {
                 case 'rock':
-                    // code
+                    return "You win! Paper beats Rock!"
                     break;
                 
                 case 'paper':
-                    // code
+                    return "It's a draw!";
                     break;
 
                 case 'scissors':
-                    // code
+                    return "You lose! Scissors beat Paper!"
             }
             break;
         
         case 'scissors':
             switch(computerSelection) {
                 case 'rock':
-                    // code
+                    return "You lose! Rock beats Scissors!"
                     break;
                 
                 case 'paper':
-                    // code
+                    return "You win! Scissors beat Paper!"
                     break;
 
                 case 'scissors':
-                    // code
+                    return "It's a draw!";
             }
             break;
     }
 
 }
 
+console.log(playRound());
