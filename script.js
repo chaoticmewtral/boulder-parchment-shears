@@ -1,30 +1,5 @@
 // https://www.theodinproject.com/lessons/foundations-rock-paper-scissors#assignment
-// computer randomly chooses from ['boulder', 'parchment', 'shears']
-// user selects from ['boulder', 'parchment', 'shears']
-// if computer selects boulder:
-//     if user selects boulder
-//         tie
-//         play again
-//     if user selects parchment
-//         user wins
-//     if user selects shears
-//         user loses
-// if computer selects parchment:
-//     if user selects boulder
-//         user loses
-//     if user selects parchment
-//         tie
-//         play again
-//     if user selects shears
-//         user wins
-// if computer selects shears:
-//     if user selects boulder
-//         user wins
-//     if user selects parchment
-//         user loses
-//     if user selects shears
-//         tie
-//         play again
+
 
 let choice = ['boulder', 'parchment', 'shears'];
 
