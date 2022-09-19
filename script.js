@@ -99,12 +99,15 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
 
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-        
-//     }
-// }
+function game() {
+    const score = [];
 
-// console.log(game());
+    for (let i = 0; i < 5; i++) {
+        score[i] = (playRound(playerSelection, computerSelection));
+    }
+    return score;
+}
+
+console.log(game());
