@@ -37,65 +37,63 @@ let playerSelection = prompt('rock, paper, scissors');
 let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-    // let player = (playerSelection.toLowerCase());
+    
+    if (playerSelection === null) {
+        return "Aww, don't you want to play?";
+    } else {
+        switch(playerSelection.toLowerCase()) {
+            case 'rock':
+                switch(computerSelection) {
+                    case 'rock':
+                        return "It's a draw!";
+                        break;
+                    
+                    case 'paper':
+                        return "You lose! Paper beats Rock!";
+                        break;
 
-    switch(playerSelection.toLowerCase()) {
-        case 'rock':
-            switch(computerSelection) {
-                case 'rock':
-                    return "It's a draw!";
-                    break;
+                    case 'scissors':
+                        return "You win! Rock beats Scissors!"
+                }
+                break;
+            case 'paper':
+                switch(computerSelection) {
+                    case 'rock':
+                        return "You win! Paper beats Rock!"
+                        break;
+                    
+                    case 'paper':
+                        return "It's a draw!";
+                        break;
+
+                    case 'scissors':
+                        return "You lose! Scissors beat Paper!"
+                }
+                break;
+            
+            case 'scissors':
+                switch(computerSelection) {
+                    case 'rock':
+                        return "You lose! Rock beats Scissors!"
+                        break;
+                    
+                    case 'paper':
+                        return "You win! Scissors beat Paper!"
+                        break;
+
+                    case 'scissors':
+                        return "It's a draw!";
+                }
+                break;
                 
-                case 'paper':
-                    return "You lose! Paper beats Rock!";
-                    break;
-
-                case 'scissors':
-                    return "You win! Rock beats Scissors!"
-            }
-            break;
-        case 'paper':
-            switch(computerSelection) {
-                case 'rock':
-                    return "You win! Paper beats Rock!"
-                    break;
-                
-                case 'paper':
-                    return "It's a draw!";
-                    break;
-
-                case 'scissors':
-                    return "You lose! Scissors beat Paper!"
-            }
-            break;
-        
-        case 'scissors':
-            switch(computerSelection) {
-                case 'rock':
-                    return "You lose! Rock beats Scissors!"
-                    break;
-                
-                case 'paper':
-                    return "You win! Scissors beat Paper!"
-                    break;
-
-                case 'scissors':
-                    return "It's a draw!";
-            }
-            break;
-        
-        case null:
-            return "Aww, you don't want to play with me?";
-            break;
-        
-        case '':
-            return "You have to choose one."
-            break;
-        
-        default:
-            return "That's...not one of the options."
+            case '':
+                return "You have to choose one."
+                break;
+            
+            default:
+                return "That's...not one of the options."
+        }
     }
-
 }
 
 console.log(playRound(playerSelection, computerSelection));
