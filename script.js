@@ -40,9 +40,7 @@ function playRound(playerSelection, computerSelection) {
     // assign variables
     playerSelection = prompt('boulder, parchment, shears');
     computerSelection = getComputerChoice();
-    const win = (`You win! ${playerSelection} beats ${computerSelection}`);
-    const lose = (`You lose! ${computerSelection} beats ${playerSelection}`);
-    const draw = ("It's a draw");
+
 
     if (playerSelection === null) {
         return "Aww, don't you want to play?";
@@ -51,44 +49,44 @@ function playRound(playerSelection, computerSelection) {
             case 'boulder':
                 switch(computerSelection) {
                     case 'boulder':
-                        return draw;
+                        return "draw";
                         break;
                     
                     case 'parchment':
-                        return lose;
+                        return "lose";
                         break;
 
                     case 'shears':
-                        return win;
+                        return "win";
                 }
                 break;
             case 'parchment':
                 switch(computerSelection) {
                     case 'boulder':
-                        return win;
+                        return "win";
                         break;
                     
                     case 'parchment':
-                        return draw;
+                        return "draw";
                         break;
 
                     case 'shears':
-                        return lose;
+                        return "lose";
                 }
                 break;
             
             case 'shears':
                 switch(computerSelection) {
                     case 'boulder':
-                        return lose;
+                        return "lose";
                         break;
                     
                     case 'parchment':
-                        return win;
+                        return "win";
                         break;
 
                     case 'shears':
-                        return draw;
+                        return "draw";
                 }
                 break;
                 
@@ -105,6 +103,9 @@ function playRound(playerSelection, computerSelection) {
 // console.log(playRound(playerSelection, computerSelection));
 
 function game() {
+
+    const score = [];
+
     for (let i = 0; i < 5; i++) {
         playRound();
         console.log(`Round ${i + 1}: ${playRound(playerSelection, computerSelection)}`);
