@@ -133,13 +133,6 @@ function msg() {
     }
     }
 
-
-// const win = (`You win! ${playerSelection} beats ${computerSelection}`);
-// const lose = (`You lose! ${computerSelection} beats ${playerSelection}`);
-// const draw = ("It's a draw");
-
-// console.log(playRound(playerSelection, computerSelection));
-
 function game() {
 
     let wins = 0;
