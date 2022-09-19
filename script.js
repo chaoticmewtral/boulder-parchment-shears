@@ -26,11 +26,12 @@
 //         tie
 //         play again
 
-let param = ['rock', 'paper', 'scissors'];
+let choice = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
-
+    return choice[Math.floor(Math.random() * 3)];
 }
+console.log(getComputerChoice());
 
 function playRound(playerSelection, computerSelection) {
 
