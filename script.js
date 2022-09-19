@@ -33,14 +33,18 @@ function getComputerChoice() {
 }
 // console.log(getComputerChoice());
 
-let playerSelection = prompt('boulder, parchment, shears');
-let computerSelection = getComputerChoice();
-const win = (`You win! ${playerSelection} beats ${computerSelection}`);
-const lose = (`You lose! ${computerSelection} beats ${playerSelection}`);
-const draw = ("It's a draw");
+let playerSelection;
+let computerSelection;
 
 function playRound(playerSelection, computerSelection) {
     
+    // assign variables
+    playerSelection = prompt('boulder, parchment, shears');
+    computerSelection = getComputerChoice();
+    const win = (`You win! ${playerSelection} beats ${computerSelection}`);
+    const lose = (`You lose! ${computerSelection} beats ${playerSelection}`);
+    const draw = ("It's a draw");
+
     if (playerSelection === null) {
         return "Aww, don't you want to play?";
     } else {
@@ -103,7 +107,7 @@ console.log(playRound(playerSelection, computerSelection));
 
 // function game() {
 //     for (let i = 0; i < 5; i++) {
-        
+//         playRound();
 //     }
 // }
 
