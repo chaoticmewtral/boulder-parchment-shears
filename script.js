@@ -49,17 +49,17 @@ function playRound(playerSelection, computerSelection) {
                         break;
                     
                     case 'parchment':
-                        return "You lose! parchment beats boulder!";
+                        return "You lose! Parchment beats Boulder!";
                         break;
 
                     case 'shears':
-                        return "You win! boulder beats shears!"
+                        return "You win! Boulder beats Shears!"
                 }
                 break;
             case 'parchment':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "You win! parchment beats boulder!"
+                        return "You win! Parchment beats Boulder!"
                         break;
                     
                     case 'parchment':
@@ -67,18 +67,18 @@ function playRound(playerSelection, computerSelection) {
                         break;
 
                     case 'shears':
-                        return "You lose! shears beat parchment!"
+                        return "You lose! Shears beat Parchment!"
                 }
                 break;
             
             case 'shears':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "You lose! boulder beats shears!"
+                        return "You lose! Boulder beats Shears!"
                         break;
                     
                     case 'parchment':
-                        return "You win! shears beat parchment!"
+                        return "You win! Shears beat Parchment!"
                         break;
 
                     case 'shears':
