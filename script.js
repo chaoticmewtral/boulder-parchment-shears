@@ -26,8 +26,10 @@
 //         tie
 //         play again
 
+let param = ['rock', 'paper', 'scissors'];
+
 function getComputerChoice() {
-    
+
 }
 
 function playRound(playerSelection, computerSelection) {
