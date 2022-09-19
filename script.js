@@ -1,10 +1,3 @@
-function getComputerChoice() {
-    let rps = ['rock', 'paper', 'scissors'];
-
-    return rps[(Math.floor(Math.random() * 2))];
-}
-function playRound(computerSelection, playerSelection)
-
 // https://www.theodinproject.com/lessons/foundations-rock-paper-scissors#assignment
 // computer randomly chooses from ['rock', 'paper', 'scissors']
 // user selects from ['rock', 'paper', 'scissors']
@@ -32,3 +25,11 @@ function playRound(computerSelection, playerSelection)
 //     if user selects scissors
 //         tie
 //         play again
+
+function getComputerChoice() {
+    let rps = ['rock', 'paper', 'scissors'];
+
+    return rps[(Math.floor(Math.random() * 2))];
+}
+function playRound(computerSelection, playerSelection)
+
