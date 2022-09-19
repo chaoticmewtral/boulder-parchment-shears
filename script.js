@@ -37,7 +37,9 @@ const playerSelection = prompt('rock, paper, scissors');
 const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-    switch(playerSelection.toLowerCase()) {
+    let player = (playerSelection.toLowerCase());
+
+    switch(player) {
         case 'rock':
             switch(computerSelection) {
                 case 'rock':
