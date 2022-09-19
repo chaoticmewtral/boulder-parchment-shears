@@ -34,7 +34,7 @@ function getComputerChoice() {
 
 let playerSelection;
 let computerSelection;
-let result;
+let result = [];
 
 function playRound(playerSelection, computerSelection) {
     
@@ -56,24 +56,36 @@ function playRound(playerSelection, computerSelection) {
                     case 'parchment':
                         result[0] = "lose";
                         result[1] = playerSelection;
+                        result[2] = computerSelection;
+                        return result;
                         break;
 
                     case 'shears':
                         result[0] = "win";
+                        result[1] = playerSelection;
+                        result[2] = computerSelection;
+                        return result;
                 }
                 break;
             case 'parchment':
                 switch(computerSelection) {
                     case 'boulder':
                         result[0] = "win";
+                        result[1] = playerSelection;
+                        result[2] = computerSelection;
+                        return result;
                         break;
                     
                     case 'parchment':
                         result[0] = "draw";
+                        return result;
                         break;
 
                     case 'shears':
                         result[0] = "lose";
+                        result[1] = playerSelection;
+                        result[2] = computerSelection;
+                        return result;
                 }
                 break;
             
@@ -81,14 +93,21 @@ function playRound(playerSelection, computerSelection) {
                 switch(computerSelection) {
                     case 'boulder':
                         result[0] = "lose";
+                        result[1] = playerSelection;
+                        result[2] = computerSelection;
+                        return result;
                         break;
                     
                     case 'parchment':
                         result[0] = "win";
+                        result[1] = playerSelection;
+                        result[2] = computerSelection;
+                        return result;
                         break;
 
                     case 'shears':
                         result[0] = "draw";
+                        return result;
                 }
                 break;
                 
@@ -101,6 +120,20 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
+
+function msg() {
+    if (result[0] === "win") {
+        return `You win! ${result[1]} beats ${result[2]}.`; 
+    } else if (result[0] === "lose") {
+        return `You lose! ${result[2]} beats ${result[1]}.`;
+    } else if (result[0] === "draw") {
+        return "It's a draw!";
+    } else {
+        return "Invalid entry."
+    }
+    }
+
+
 // const win = (`You win! ${playerSelection} beats ${computerSelection}`);
 // const lose = (`You lose! ${computerSelection} beats ${playerSelection}`);
 // const draw = ("It's a draw");
@@ -113,8 +146,10 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         playRound();
-        console.log(`Round ${i + 1}: ${playRound(playerSelection, computerSelection)}`);
+        score[i] = result[0];
+        console.log(`Round ${i + 1}: ${msg()}`);
     }
+return score;
 }
 
 console.log(game());
