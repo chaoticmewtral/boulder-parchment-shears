@@ -34,13 +34,13 @@ function getComputerChoice() {
 
 let playerSelection;
 let computerSelection;
+let result;
 
 function playRound(playerSelection, computerSelection) {
     
     // assign variables
     playerSelection = prompt('boulder, parchment, shears');
     computerSelection = getComputerChoice();
-
 
     if (playerSelection === null) {
         return "Aww, don't you want to play?";
@@ -49,44 +49,46 @@ function playRound(playerSelection, computerSelection) {
             case 'boulder':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "draw";
+                        result[0] = "draw";
+                        return result;
                         break;
                     
                     case 'parchment':
-                        return "lose";
+                        result[0] = "lose";
+                        result[1] = playerSelection;
                         break;
 
                     case 'shears':
-                        return "win";
+                        result[0] = "win";
                 }
                 break;
             case 'parchment':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "win";
+                        result[0] = "win";
                         break;
                     
                     case 'parchment':
-                        return "draw";
+                        result[0] = "draw";
                         break;
 
                     case 'shears':
-                        return "lose";
+                        result[0] = "lose";
                 }
                 break;
             
             case 'shears':
                 switch(computerSelection) {
                     case 'boulder':
-                        return "lose";
+                        result[0] = "lose";
                         break;
                     
                     case 'parchment':
-                        return "win";
+                        result[0] = "win";
                         break;
 
                     case 'shears':
-                        return "draw";
+                        result[0] = "draw";
                 }
                 break;
                 
