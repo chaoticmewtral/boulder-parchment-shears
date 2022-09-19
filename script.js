@@ -83,6 +83,17 @@ function playRound(playerSelection, computerSelection) {
                     return "It's a draw!";
             }
             break;
+        
+        case null:
+            return "Aww, you don't want to play with me?";
+            break;
+        
+        case '':
+            return "You have to choose one."
+            break;
+        
+        default:
+            return "That's...not one of the options."
     }
 
 }
