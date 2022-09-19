@@ -162,7 +162,11 @@ function game() {
         return `Oof, you lost ${losses} times. Better luck next time.`
     } else if  (wins > losses) {
         return `*Technically* you won more than you lost, but I'd hardly call it a sweeping victory.`
-    } else {
+    } else if (wins = losses) {
+        return "You won just as many times as you lost."
+    }
+    
+    else {
         return "Better luck next time."
     }
 }
