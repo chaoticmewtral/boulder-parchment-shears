@@ -1,4 +1,4 @@
-// https://www.theodinproject.com/lessons/foundations-boulder-parchment-shears#assignment
+// https://www.theodinproject.com/lessons/foundations-rock-paper-scissors#assignment
 // computer randomly chooses from ['boulder', 'parchment', 'shears']
 // user selects from ['boulder', 'parchment', 'shears']
 // if computer selects boulder:
