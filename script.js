@@ -11,6 +11,15 @@ let playerSelection;
 let computerSelection;
 let result = [];
 
+// player selection
+const bps = document.querySelectorAll('button');
+
+bps.forEach((button) => {
+    button.addEventListener('click', () => {
+        return button.id;
+    });
+});
+
 function playRound(playerSelection, computerSelection) {
     
     // assign variables
@@ -108,35 +117,35 @@ function msg() {
     }
     }
 
-function game() {
+// function game() {
 
-    let wins = 0;
-    let losses = 0;
+//     let wins = 0;
+//     let losses = 0;
 
-    for (let i = 0; i < 5; i++) {
-        playRound();
+//     for (let i = 0; i < 5; i++) {
+//         playRound();
         
-        if (result[0] === "win") {
-        wins++;
-        }
-        if (result[0] === "lose") {
-            losses++;
-        }
-        console.log(`Round ${i + 1}: ${msg()}`);
-    }
-    if (wins >= 3) {
-        return `You won ${wins} rounds! Victory is yours!`
-    } else if (losses >= 3) {
-        return `Oof, you lost ${losses} times. Better luck next time.`
-    } else if  (wins > losses) {
-        return `*Technically* you won more than you lost, but I'd hardly call it a sweeping victory.`
-    } else if (wins = losses) {
-        return "You won just as many times as you lost."
-    }
+//         if (result[0] === "win") {
+//         wins++;
+//         }
+//         if (result[0] === "lose") {
+//             losses++;
+//         }
+//         console.log(`Round ${i + 1}: ${msg()}`);
+//     }
+//     if (wins >= 3) {
+//         return `You won ${wins} rounds! Victory is yours!`
+//     } else if (losses >= 3) {
+//         return `Oof, you lost ${losses} times. Better luck next time.`
+//     } else if  (wins > losses) {
+//         return `*Technically* you won more than you lost, but I'd hardly call it a sweeping victory.`
+//     } else if (wins = losses) {
+//         return "You won just as many times as you lost."
+//     }
     
-    else {
-        return "Better luck next time."
-    }
-}
+//     else {
+//         return "Better luck next time."
+//     }
+// }
 
-console.log(game());
+// console.log(game());
