@@ -23,7 +23,7 @@ bps.forEach((button) => {
 function playRound(playerSelection, computerSelection) {
     
     // assign variables
-    playerSelection = prompt('boulder, parchment, shears');
+    playerSelection = bps();
     computerSelection = getComputerChoice();
 
     if (playerSelection === null) {
