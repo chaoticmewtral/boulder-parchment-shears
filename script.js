@@ -16,7 +16,7 @@ const bps = document.querySelectorAll('button');
 
 bps.forEach((button) => {
     button.addEventListener('click', () => {
-        return button.id;
+        console.log(button.id);
     });
 });
 
