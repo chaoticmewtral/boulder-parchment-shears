@@ -95,12 +95,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function msg() {
-    if (result[0] === "win") {
-        return `You win! ${result[1]} beats ${result[2]}.`; 
-    } else if (result[0] === "lose") {
-        return `You lose! ${result[2]} beats ${result[1]}.`;
-    } else (result[0] === "draw") {
-        return "It's a draw!";
+    switch(result[0]) {
+        case "win":
+            return `You win! ${result[1]} beats ${result[2]}.`;
+            break;
+        
+        case "lose":
+            return `You lose! ${result[2]} beats ${result[1]}.`;
+            break;
+
+        case "draw":
+            return "It's a draw!";
     }
 }
 
