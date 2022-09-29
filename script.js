@@ -11,19 +11,19 @@ let playerSelection;
 let computerSelection;
 let result = [];
 
-// player selection
-const bps = document.querySelectorAll('button');
 
-bps.forEach((button) => {
-    button.addEventListener('click', () => {
-        return button.id;
-    });
-});
 
 function playRound(playerSelection, computerSelection) {
-    
+    // player selection
+    const bps = document.querySelectorAll('button');
+
+    bps.forEach((button) => {
+        button.addEventListener('click', () => {
+        playerSelection = button.id;
+        return playerSelection;
+    });
+});
     // assign variables
-    playerSelection = bps();
     computerSelection = getComputerChoice();
 
     switch(playerSelection) {
