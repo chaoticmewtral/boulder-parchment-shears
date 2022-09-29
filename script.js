@@ -16,7 +16,7 @@ const bps = document.querySelectorAll('button');
 
 bps.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.id);
+        return button.id;
     });
 });
 
@@ -26,82 +26,71 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = bps();
     computerSelection = getComputerChoice();
 
-    if (playerSelection === null) {
-        return "Aww, don't you want to play?";
-    } else {
-        switch(playerSelection.toLowerCase()) {
-            case 'boulder':
-                switch(computerSelection) {
-                    case 'boulder':
-                        result[0] = "draw";
-                        return result;
-                        break;
+    switch(playerSelection) {
+        case 'boulder':
+            switch(computerSelection) {
+                case 'boulder':
+                    result[0] = "draw";
+                    return result;
+                    break;
                     
-                    case 'parchment':
-                        result[0] = "lose";
-                        result[1] = playerSelection;
-                        result[2] = computerSelection;
-                        return result;
-                        break;
+                case 'parchment':
+                    result[0] = "lose";
+                    result[1] = playerSelection;
+                    result[2] = computerSelection;
+                    return result;
+                    break;
 
-                    case 'shears':
-                        result[0] = "win";
-                        result[1] = playerSelection;
-                        result[2] = computerSelection;
-                        return result;
-                }
-                break;
-            case 'parchment':
-                switch(computerSelection) {
-                    case 'boulder':
-                        result[0] = "win";
-                        result[1] = playerSelection;
-                        result[2] = computerSelection;
-                        return result;
-                        break;
+                case 'shears':
+                    result[0] = "win";
+                    result[1] = playerSelection;
+                    result[2] = computerSelection;
+                    return result;
+            }
+            break;
+        case 'parchment':
+            switch(computerSelection) {
+                case 'boulder':
+                    result[0] = "win";
+                    result[1] = playerSelection;
+                    result[2] = computerSelection;
+                    return result;
+                    break;
                     
-                    case 'parchment':
-                        result[0] = "draw";
-                        return result;
-                        break;
+                case 'parchment':
+                    result[0] = "draw";
+                    return result;
+                    break;
 
-                    case 'shears':
-                        result[0] = "lose";
-                        result[1] = playerSelection;
-                        result[2] = computerSelection;
-                        return result;
-                }
-                break;
+                case 'shears':
+                    result[0] = "lose";
+                    result[1] = playerSelection;
+                    result[2] = computerSelection;
+                    return result;
+            }
+            break;
             
-            case 'shears':
-                switch(computerSelection) {
-                    case 'boulder':
-                        result[0] = "lose";
-                        result[1] = playerSelection;
-                        result[2] = computerSelection;
-                        return result;
-                        break;
+        case 'shears':
+            switch(computerSelection) {
+                case 'boulder':
+                    result[0] = "lose";
+                    result[1] = playerSelection;
+                    result[2] = computerSelection;
+                    return result;
+                    break;
                     
-                    case 'parchment':
-                        result[0] = "win";
-                        result[1] = playerSelection;
-                        result[2] = computerSelection;
-                        return result;
-                        break;
+                case 'parchment':
+                    result[0] = "win";
+                    result[1] = playerSelection;
+                    result[2] = computerSelection;
+                    return result;
+                    break;
 
-                    case 'shears':
-                        result[0] = "draw";
-                        return result;
-                }
-                break;
-                
-            case '':
-                return "You have to choose one."
-                break;
+                case 'shears':
+                    result[0] = "draw";
+                    return result;
+            }
             
-            default:
-                return "That's...not one of the options."
-        }
     }
 }
 
