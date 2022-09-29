@@ -10,14 +10,6 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-function getPlayerChoice() { 
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            return button.id;
-        });
-    });
-}
-
 function playRound() {
     playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
@@ -89,3 +81,7 @@ function playRound() {
             
     }
 }
+
+buttons.forEach((button) => {
+    button.addEventListener('click', playRound()
+)});
