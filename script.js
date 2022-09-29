@@ -11,7 +11,7 @@ function getComputerChoice() {
 }
 
 function playRound() {
-    playerSelection = getPlayerChoice();
+    playerSelection = button.id;
     computerSelection = getComputerChoice();
 
     switch(playerSelection) {
