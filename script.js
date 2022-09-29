@@ -99,12 +99,10 @@ function msg() {
         return `You win! ${result[1]} beats ${result[2]}.`; 
     } else if (result[0] === "lose") {
         return `You lose! ${result[2]} beats ${result[1]}.`;
-    } else if (result[0] === "draw") {
+    } else (result[0] === "draw") {
         return "It's a draw!";
-    } else {
-        return "Invalid entry."
     }
-    }
+}
 
 // function game() {
 
