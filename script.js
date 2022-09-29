@@ -11,7 +11,6 @@ function getComputerChoice() {
 }
 
 function playRound() {
-    playerSelection = button.id;
     computerSelection = getComputerChoice();
 
     switch(playerSelection) {
@@ -83,5 +82,7 @@ function playRound() {
 }
 
 buttons.forEach((button) => {
-    button.addEventListener('click', playRound()
-)});
+    button.addEventListener('click', playRound(button.id) {
+        playerSelection = button.id;
+    });
+});
