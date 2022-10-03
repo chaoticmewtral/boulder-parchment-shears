@@ -77,7 +77,8 @@ function playRound(playerSelection) {
                 case 'Shears':
                     result[0] = "draw";
                     return result;
-
+            }
+    }
 }
 
 buttons.forEach((button) => {
