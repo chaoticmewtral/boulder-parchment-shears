@@ -16,3 +16,10 @@ function playRound() {
 buttons.forEach((button) => {
     button.addEventListener('click', playRound(button.id));
 });
+
+// Player clicks boulder, parchment, or shears to begin gameplay
+// Computer randomly selects one of the options
+// Compare and return results
+// Add to score
+// When player or computer reaches 5 wins, the game is over
+// Declare winner
