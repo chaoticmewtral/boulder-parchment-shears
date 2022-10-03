@@ -11,7 +11,17 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-function playRound() {
+function playRound(playerSelection) {
+    computerSelection = getComputerChoice();
+
+    switch(playerSelection) {
+        case 'Boulder':
+            switch(computerSelection) {
+                case 'Boulder':
+                    result[0] = 
+            }
+    }
+
 }
 
 buttons.forEach((button) => {
