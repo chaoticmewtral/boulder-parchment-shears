@@ -29,6 +29,7 @@ buttons.forEach((button) => {
                         result[0] = "lose";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
+                        compScore++;
                         // return result;
                         break;
     
@@ -36,6 +37,7 @@ buttons.forEach((button) => {
                         result[0] = "win";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
+                        playerScore++;
                         // return result;
                 }
                 break;
@@ -45,6 +47,7 @@ buttons.forEach((button) => {
                         result[0] = "win";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
+                        playerScore++;
                         // return result;
                         break;
                     
@@ -58,6 +61,7 @@ buttons.forEach((button) => {
                         result[0] = "lose";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
+                        compScore++;
                         // return result;
                 }
                 break;
@@ -68,6 +72,7 @@ buttons.forEach((button) => {
                         result[0] = "lose";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
+                        compScore++;
                         // return result;
                         break;
                     
@@ -75,6 +80,7 @@ buttons.forEach((button) => {
                         result[0] = "win";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
+                        playerScore++;
                         // return result;
                         break;
     
@@ -84,7 +90,7 @@ buttons.forEach((button) => {
                         // return result;
                 }
         }
-        console.log(msg());
+        console.log(msg(), `Score: ${playerScore} to ${compScore}.`);
     });
 });
 
@@ -109,7 +115,9 @@ function getComputerChoice() {
 
 function playGame() {
     if (playerScore == 5) {
-        return ""
+        return "You win the game!";
+    } else if (compScore == 5) {
+        return "You lost. Better luck next time.";
     }
 }
 
