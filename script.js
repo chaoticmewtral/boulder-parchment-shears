@@ -1,6 +1,8 @@
 // variables
 const choice = ['Boulder', 'Parchment', 'Shears'];
 const buttons = document.querySelectorAll('.bps');
+const divResults = document.querySelector('#results');
+const score = document.querySelector('#score');
 
 let result = [];
 let playerSelection;
@@ -106,7 +108,9 @@ function getComputerChoice() {
 }
 
 function playGame() {
-
+    if (playerScore == 5) {
+        return ""
+    }
 }
 
 // function playRound() {
