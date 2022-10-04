@@ -91,6 +91,7 @@ buttons.forEach((button) => {
                 }
         }
         console.log(msg(), `Score: ${playerScore} to ${compScore}.`);
+        playGame();
     });
 });
 
@@ -115,9 +116,9 @@ function getComputerChoice() {
 
 function playGame() {
     if (playerScore == 5) {
-        return "You win the game!";
+        console.log("You win the game!");
     } else if (compScore == 5) {
-        return "You lost. Better luck next time.";
+        console.log("You lost. Better luck next time.");
     }
 }
 
