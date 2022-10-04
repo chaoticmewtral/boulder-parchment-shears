@@ -9,6 +9,7 @@ let playerSelection;
 let computerSelection;
 let compScore = 0;
 let playerScore = 0;
+let round = 0;
 
 // functions
 buttons.forEach((button) => {
