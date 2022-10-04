@@ -5,6 +5,8 @@ const buttons = document.querySelectorAll('.bps');
 let result = [];
 let playerSelection;
 let computerSelection;
+let compScore = 0;
+let playerScore = 0;
 
 // functions
 buttons.forEach((button) => {
@@ -17,6 +19,7 @@ buttons.forEach((button) => {
                 switch(computerSelection) {
                     case 'Boulder':
                         result[0] = "draw";
+                        result[1] = playerSelection;
                         // return result;
                         break;
                     
@@ -45,6 +48,7 @@ buttons.forEach((button) => {
                     
                     case 'Parchment':
                         result[0] = "draw";
+                        result[1] = playerSelection;
                         // return result;
                         break;
     
@@ -74,15 +78,35 @@ buttons.forEach((button) => {
     
                     case 'Shears':
                         result[0] = "draw";
+                        result[1] = playerSelection;
                         // return result;
                 }
         }
-        console.log(result);
+        console.log(msg());
     });
 });
 
+function msg() {
+    switch(result[0]) {
+        case 'win':
+            return `You win! ${result[1]} beats ${result[2]}!`
+            break;
+
+        case 'lose':
+            return `You lose! ${result[2]} beats ${result[1]}!`
+            break;
+
+        case 'draw':
+            return `It's a draw! You both chose ${result[1]}!`
+    }
+}
+
 function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
+}
+
+function playGame() {
+
 }
 
 // function playRound() {
