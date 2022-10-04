@@ -1,6 +1,6 @@
 // variables
 const choice = ['Boulder', 'Parchment', 'Shears'];
-const buttons = document.querySelectorAll('#buttons.button');
+const buttons = document.querySelectorAll('.bps');
 
 let result = [];
 let playerSelection;
