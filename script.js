@@ -119,6 +119,7 @@ function roundResults() {
             str = `Round ${round}: It's a draw. You both chose ${playerSelection}.`
     }
     pResults.textContent = str;
+    pResults.classList.add(`${result[0]}`);
     divResults.appendChild(pResults);
 }
 
