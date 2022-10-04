@@ -17,21 +17,21 @@ buttons.forEach((button) => {
                 switch(computerSelection) {
                     case 'Boulder':
                         result[0] = "draw";
-                        return result;
+                        // return result;
                         break;
                     
                     case 'Parchment':
                         result[0] = "lose";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
-                        return result;
+                        // return result;
                         break;
     
                     case 'Shears':
                         result[0] = "win";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
-                        return result;
+                        // return result;
                 }
                 break;
             case 'Parchment':
@@ -40,19 +40,19 @@ buttons.forEach((button) => {
                         result[0] = "win";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
-                        return result;
+                        // return result;
                         break;
                     
                     case 'Parchment':
                         result[0] = "draw";
-                        return result;
+                        // return result;
                         break;
     
                     case 'Shears':
                         result[0] = "lose";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
-                        return result;
+                        // return result;
                 }
                 break;
             
@@ -62,21 +62,22 @@ buttons.forEach((button) => {
                         result[0] = "lose";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
-                        return result;
+                        // return result;
                         break;
                     
                     case 'Parchment':
                         result[0] = "win";
                         result[1] = playerSelection;
                         result[2] = computerSelection;
-                        return result;
+                        // return result;
                         break;
     
                     case 'Shears':
                         result[0] = "draw";
-                        return result;
+                        // return result;
                 }
         }
+        console.log(result);
     });
 });
 
@@ -91,21 +92,21 @@ function getComputerChoice() {
 //             switch(computerSelection) {
 //                 case 'Boulder':
 //                     result[0] = "draw";
-//                     return result;
+// //                     return result;
 //                     break;
                 
 //                 case 'Parchment':
 //                     result[0] = "lose";
 //                     result[1] = playerSelection;
 //                     result[2] = computerSelection;
-//                     return result;
+// //                     return result;
 //                     break;
 
 //                 case 'Shears':
 //                     result[0] = "win";
 //                     result[1] = playerSelection;
 //                     result[2] = computerSelection;
-//                     return result;
+// //                     return result;
 //             }
 //             break;
 //         case 'Parchment':
@@ -114,19 +115,19 @@ function getComputerChoice() {
 //                     result[0] = "win";
 //                     result[1] = playerSelection;
 //                     result[2] = computerSelection;
-//                     return result;
+// //                     return result;
 //                     break;
                 
 //                 case 'Parchment':
 //                     result[0] = "draw";
-//                     return result;
+// //                     return result;
 //                     break;
 
 //                 case 'Shears':
 //                     result[0] = "lose";
 //                     result[1] = playerSelection;
 //                     result[2] = computerSelection;
-//                     return result;
+// //                     return result;
 //             }
 //             break;
         
@@ -136,19 +137,19 @@ function getComputerChoice() {
 //                     result[0] = "lose";
 //                     result[1] = playerSelection;
 //                     result[2] = computerSelection;
-//                     return result;
+// //                     return result;
 //                     break;
                 
 //                 case 'Parchment':
 //                     result[0] = "win";
 //                     result[1] = playerSelection;
 //                     result[2] = computerSelection;
-//                     return result;
+// //                     return result;
 //                     break;
 
 //                 case 'Shears':
 //                     result[0] = "draw";
-//                     return result;
+// //                     return result;
 //             }
 //     }
 //     console.log(result);
