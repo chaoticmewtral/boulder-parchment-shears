@@ -11,7 +11,6 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.id;
         computerSelection = getComputerChoice();
-        console.log(playerSelection, computerSelection);
     });
 });
 
