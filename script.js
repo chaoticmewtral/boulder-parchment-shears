@@ -1,7 +1,6 @@
 // variables
 const choice = ['Boulder', 'Parchment', 'Shears'];
-const buttons = document.querySelector('#buttons');
-const rps = buttons.querySelectorAll('button');
+const buttons = document.querySelectorAll('#buttons.button');
 
 let result = [];
 let playerSelection;
@@ -14,75 +13,75 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-function playRound() {
+// function playRound() {
 
-    switch(playerSelection) {
-        case 'Boulder':
-            switch(computerSelection) {
-                case 'Boulder':
-                    result[0] = "draw";
-                    return result;
-                    break;
+//     switch(playerSelection) {
+//         case 'Boulder':
+//             switch(computerSelection) {
+//                 case 'Boulder':
+//                     result[0] = "draw";
+//                     return result;
+//                     break;
                 
-                case 'Parchment':
-                    result[0] = "lose";
-                    result[1] = playerSelection;
-                    result[2] = computerSelection;
-                    return result;
-                    break;
+//                 case 'Parchment':
+//                     result[0] = "lose";
+//                     result[1] = playerSelection;
+//                     result[2] = computerSelection;
+//                     return result;
+//                     break;
 
-                case 'Shears':
-                    result[0] = "win";
-                    result[1] = playerSelection;
-                    result[2] = computerSelection;
-                    return result;
-            }
-            break;
-        case 'Parchment':
-            switch(computerSelection) {
-                case 'Boulder':
-                    result[0] = "win";
-                    result[1] = playerSelection;
-                    result[2] = computerSelection;
-                    return result;
-                    break;
+//                 case 'Shears':
+//                     result[0] = "win";
+//                     result[1] = playerSelection;
+//                     result[2] = computerSelection;
+//                     return result;
+//             }
+//             break;
+//         case 'Parchment':
+//             switch(computerSelection) {
+//                 case 'Boulder':
+//                     result[0] = "win";
+//                     result[1] = playerSelection;
+//                     result[2] = computerSelection;
+//                     return result;
+//                     break;
                 
-                case 'Parchment':
-                    result[0] = "draw";
-                    return result;
-                    break;
+//                 case 'Parchment':
+//                     result[0] = "draw";
+//                     return result;
+//                     break;
 
-                case 'Shears':
-                    result[0] = "lose";
-                    result[1] = playerSelection;
-                    result[2] = computerSelection;
-                    return result;
-            }
-            break;
+//                 case 'Shears':
+//                     result[0] = "lose";
+//                     result[1] = playerSelection;
+//                     result[2] = computerSelection;
+//                     return result;
+//             }
+//             break;
         
-        case 'Shears':
-            switch(computerSelection) {
-                case 'Boulder':
-                    result[0] = "lose";
-                    result[1] = playerSelection;
-                    result[2] = computerSelection;
-                    return result;
-                    break;
+//         case 'Shears':
+//             switch(computerSelection) {
+//                 case 'Boulder':
+//                     result[0] = "lose";
+//                     result[1] = playerSelection;
+//                     result[2] = computerSelection;
+//                     return result;
+//                     break;
                 
-                case 'Parchment':
-                    result[0] = "win";
-                    result[1] = playerSelection;
-                    result[2] = computerSelection;
-                    return result;
-                    break;
+//                 case 'Parchment':
+//                     result[0] = "win";
+//                     result[1] = playerSelection;
+//                     result[2] = computerSelection;
+//                     return result;
+//                     break;
 
-                case 'Shears':
-                    result[0] = "draw";
-                    return result;
-            }
-    }
-    console.log(result);
-}
+//                 case 'Shears':
+//                     result[0] = "draw";
+//                     return result;
+//             }
+//     }
+//     console.log(result);
+// }
 
 
 
