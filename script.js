@@ -132,6 +132,7 @@ function playGame() {
         bps.innerText = "You win! Way to go!";
     } else if (compScore == 5) {
         bps.setAttribute('class', 'gameOver, lose');
+        bps.innerText = "You lost! Better luck next time!";
     }
 }
 
