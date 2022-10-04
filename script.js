@@ -1,18 +1,27 @@
 // variables
 const choice = ['Boulder', 'Parchment', 'Shears'];
 const buttons = document.querySelector('#buttons');
+const rps = document.querySelectorAll(buttons.button);
 
 let result = [];
 let playerSelection;
 let computerSelection;
 
 // functions
+rps.forEach((e) => {
+    e.addEventListener('click', () => {
+        playerSelection = button.id;
+        computerSelection = getComputerChoice();
+        // playRound(playerSelection, computerSelection);
+        console.log(playerSelection);
+    });
+});
+
 function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-function playRound(playerSelection) {
-    computerSelection = getComputerChoice();
+function playRound() {
 
     switch(playerSelection) {
         case 'Boulder':
@@ -79,11 +88,10 @@ function playRound(playerSelection) {
                     return result;
             }
     }
+    console.log(result);
 }
 
-buttons.forEach((button) => {
-    button.addEventListener('click', playRound(button.id));
-});
+
 
 // Player clicks Boulder, Parchment, or Shears to begin gameplay
 // Computer randomly selects one of the options
