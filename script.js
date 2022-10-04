@@ -91,24 +91,31 @@ buttons.forEach((button) => {
                         // return result;
                 }
         }
-        console.log(msg(), `Score: ${playerScore} to ${compScore}.`);
+        round++;
+        // add to DOM
+        roundResults();
         playGame();
     });
 });
 
-function msg() {
+function roundResults() {
+    let str;
+    const pResults = document.createElement('p');
+    
     switch(result[0]) {
         case 'win':
-            return `You win! ${result[1]} beats ${result[2]}!`
+            str = `Round ${round}: You win! ${playerSelection} beats ${computerSelection}!`
             break;
 
         case 'lose':
-            return `You lose! ${result[2]} beats ${result[1]}!`
+            str = `Round ${round}: You lose! ${computerSelection} beats ${playerSelection}.`
             break;
 
         case 'draw':
-            return `It's a draw! You both chose ${result[1]}!`
+            str = `Round ${round}: It's a draw. You both chose ${playerSelection}.`
     }
+    pResults.textContent = str;
+    divResults.appendChild(pResults);
 }
 
 function getComputerChoice() {
