@@ -3,6 +3,7 @@ const choice = ['Boulder', 'Parchment', 'Shears'];
 const buttons = document.querySelectorAll('.bps');
 const divResults = document.querySelector('#results');
 const score = document.querySelector('#score');
+const bps = document.querySelector('#bps');
 
 let result = [];
 let playerSelection;
@@ -94,6 +95,9 @@ buttons.forEach((button) => {
         round++;
         // add to DOM
         roundResults();
+        document.getElementById('fScore').innerText=compScore;
+        document.getElementById('pScore').innerText=playerScore;
+        // check for 5 wins
         playGame();
     });
 });
@@ -124,9 +128,10 @@ function getComputerChoice() {
 
 function playGame() {
     if (playerScore == 5) {
-        console.log("You win the game!");
+        bps.setAttribute('class', 'gameOver, win');
+        bps.innerText = "You win! Way to go!";
     } else if (compScore == 5) {
-        console.log("You lost. Better luck next time.");
+        bps.setAttribute('class', 'gameOver, lose');
     }
 }
 
