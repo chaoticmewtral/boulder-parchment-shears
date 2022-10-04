@@ -128,10 +128,10 @@ function getComputerChoice() {
 
 function playGame() {
     if (playerScore == 5) {
-        bps.setAttribute('class', 'gameOver, win');
+        bps.classList.add('gameOver', 'win');
         bps.innerText = "You win! Way to go!";
     } else if (compScore == 5) {
-        bps.setAttribute('class', 'gameOver, lose');
+        bps.classList.add('gameOver', 'lose');
         bps.innerText = "You lost! Better luck next time!";
     }
 }
