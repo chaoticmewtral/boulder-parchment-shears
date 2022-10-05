@@ -128,17 +128,24 @@ function getComputerChoice() {
 }
 
 function playGame() {
+    let message;
     if (playerScore == 5) {
         bps.classList.add('gameOver', 'win');
-        bps.innerText = "You win! Way to go!";
+        message = "You win! Way to go!";
     } else if (compScore == 5) {
         bps.classList.add('gameOver', 'lose');
-        bps.innerText = "You lost! Better luck next time!";
+        message = "You lost! Better luck next time!";
     }
 }
 
 function gameOver() {
-    let message;
     bps.removeChild('.bps');
-    bps.classList.add('gameOver');
+        
+    const txt = document.createElement('p');
+    txt.textContent = message;
+    bps.appendChild(txt);
+
+    const playAgain = document.createElement('button');
+    playAgain.textContent = 'Play Again?';
+    bps.appendChild(playAgain);
 }
