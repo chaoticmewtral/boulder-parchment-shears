@@ -5,10 +5,11 @@ body {
     flex-direction: column;
     max-width: 700px;
     margin: auto;
+    font-family: "Fondamento";
 }
 
 h1 {
-    font-family: "Homemade Apple";
+    font-family: "Uncial Antiqua";
 }
 
 .lose {
@@ -35,6 +36,8 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     font-family: "Uncial Antiqua";
+    font-size: 1.5em;
+
 }
 
 #pScore, #fScore {
