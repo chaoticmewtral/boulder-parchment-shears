@@ -7,6 +7,10 @@ body {
     margin: auto;
 }
 
+h1 {
+    font-family: "Homemade Apple";
+}
+
 .lose {
     color: red;
 }
@@ -30,6 +34,7 @@ body {
 #score {
     display: flex;
     justify-content: space-evenly;
+    font-family: "Homemade Apple";
 }
 
 #pScore, #fScore {
