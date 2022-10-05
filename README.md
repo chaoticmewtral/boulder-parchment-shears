@@ -1,9 +1,5 @@
 # boulder-parchment-shears
 Browser game of boulder, parchment, shears
 
-Player clicks boulder, parchment, or shears to begin gameplay
-Computer randomly selects one of the options
-Compare and return results
-Add to score
-When player or computer reaches 5 wins, the game is over
-Declare winner
+Background: Photo by <a href="https://unsplash.com/@kiwihug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kiwihug</a> on <a href="https://unsplash.com/s/photos/parchment?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
