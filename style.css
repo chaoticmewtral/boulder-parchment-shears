@@ -36,11 +36,19 @@ h1 {
 #score {
     display: flex;
     justify-content: space-evenly;
-    font-family: "Uncial Antiqua";
+    font-family: "Fondamento";
     font-size: 1.5em;
-
 }
 
 #pScore, #fScore {
     font-size: 2em;
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    margin-top: 10px;
+}
+
+.score p:first-child {
+    font-size: 1.6em;
+    margin-bottom: 6px;
 }
