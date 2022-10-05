@@ -148,5 +148,9 @@ function gameOver() {
 
     const playAgain = document.createElement('button');
     playAgain.textContent = 'Play Again?';
+    playAgain.classList.add('playAgain');
     bps.appendChild(playAgain);
+
+    playAgain.addEventListener('click', () => {document.location.reload()}
+    );
 }
