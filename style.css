@@ -17,3 +17,7 @@ body {
 .gameOver .bps {
     display: none;
 }
+
+.playAgain {
+    border: 1px solid blue;
+}
