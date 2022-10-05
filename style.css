@@ -13,3 +13,7 @@ body {
 .draw {
     color: purple;
 }
+
+.gameOver {
+    border: 1px solid black;
+}

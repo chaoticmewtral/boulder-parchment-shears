@@ -136,3 +136,9 @@ function playGame() {
         bps.innerText = "You lost! Better luck next time!";
     }
 }
+
+function gameOver() {
+    let message;
+    bps.removeChild('.bps');
+    bps.classList.add('gameOver');
+}
