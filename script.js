@@ -11,6 +11,7 @@ let computerSelection;
 let compScore = 0;
 let playerScore = 0;
 let round = 0;
+let message;
 
 // functions
 buttons.forEach((button) => {
@@ -128,19 +129,19 @@ function getComputerChoice() {
 }
 
 function playGame() {
-    let message;
     if (playerScore == 5) {
         bps.classList.add('gameOver', 'win');
         message = "You win! Way to go!";
+        gameOver();
     } else if (compScore == 5) {
         bps.classList.add('gameOver', 'lose');
         message = "You lost! Better luck next time!";
+        gameOver();
     }
 }
 
 function gameOver() {
-    bps.removeChild('.bps');
-        
+            
     const txt = document.createElement('p');
     txt.textContent = message;
     bps.appendChild(txt);

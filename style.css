@@ -14,6 +14,6 @@ body {
     color: purple;
 }
 
-.gameOver {
-    border: 1px solid black;
+.gameOver #bps {
+    display: flex;
 }
