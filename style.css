@@ -1,5 +1,10 @@
 body {
     text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: auto;
 }
 
 .lose {
@@ -20,4 +25,13 @@ body {
 
 .playAgain {
     border: 1px solid blue;
+}
+
+#score {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#pScore, #fScore {
+    font-size: 2em;
 }
